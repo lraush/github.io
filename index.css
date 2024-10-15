@@ -5,13 +5,18 @@ body{
 
 }
 section{
-    width: 700px;
+    max-width: 700px;
     margin: 0 auto;
+}
+a{
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
 }
 .header__wrapper{
     display: flex;
     justify-content: space-around;
-    width: 800px;
+    max-width: 800px;
     margin: 0 auto;
 }
 .header__wrapper-text{
@@ -25,7 +30,6 @@ section{
 .header__img{
     width: 200px;
     height: 250px;
-    border-radius: 300px;
 }
 .stack__contact{
     padding-top: 50px;
@@ -34,6 +38,7 @@ section{
     display: flex;
     justify-content: space-around;
     padding-top: 20px;
+    list-style: none;
 }
 .stack__contact-item{
     list-style: none;
@@ -59,10 +64,44 @@ section{
 .works__list{
     display: flex;
     gap: 50px;
+    flex-wrap: wrap;
 }
 .works{
     padding-top: 20px;
 }
 footer{ padding-top: 30px;
     text-align: center;
+}
+@media (min-width: 200px) and (max-width: 850px) {
+    .header__wrapper{
+        
+    }
+    .header__img{
+        width: 100px;
+        height: 130px;
+        border-radius: 0;
+    }
+    .header__title{
+        font-size: 20px;
+        text-align: center;
+        padding-top: 20px;
+    }
+    .stack__title{
+        font-size: 18px;
+        margin-left: 30px;
+    }
+    .stack__contact{
+        padding-top: 20px;
+    }
+    .stack__contact-list{
+        flex-direction: column;
+        gap: 20px;
+        padding-left: 10px;
+    }
+    .title{
+        font-size: 18px;
+    }
+    .works__list{
+        gap: 20px;
+    }
 }
